@@ -6,12 +6,15 @@ namespace randomnumbergame
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to the Random Number Game");
             Start();
         }
 
         static void Start()
         {
+            Console.WriteLine("=======================================");
+            Console.WriteLine("WELCOME TO THE RANDOM NUMBER GAME");
+            Console.WriteLine("=======================================");
+
             Console.WriteLine("Let's start by selecting a difficulty");
 
             foreach(Level level in Enum.GetValues(typeof(Level)))
@@ -50,8 +53,6 @@ namespace randomnumbergame
                 Success = false
             };
 
-            Console.WriteLine(game.CheckTriesLeft());
-
             while(game.CheckTriesLeft() && response.Success == false)
             {
                 response = MakeGuess(ref game);
@@ -59,15 +60,34 @@ namespace randomnumbergame
 
                 if(response.Success)
                 {
-                    Start();
+                    Console.WriteLine("Let's start a new game!");
+                    Console.WriteLine("Press Y to continue, N to exit");
+
+                    string input = Console.ReadLine();
+
+                    while(!ValidContinueInput(input))
+                    {
+                        Console.WriteLine("Not quite sure what you want to do...");
+                        Console.WriteLine("Press Y to start again, N to exit");
+                        input = Console.ReadLine();
+                    }
+
+                    if(input.ToUpper() == "Y")
+                    {
+                        Start();
+                    }
+                    else
+                    {
+                        return;
+                    }
                 }
+
+                game.PrintTriesLeft();
             }
 
-            if(!game.CheckTriesLeft())
-            {
-                Console.WriteLine("Sorry, you ran out of tries!");
-            }
-
+            Console.WriteLine("=======================================");
+            Console.WriteLine("END OF GAME");
+            Console.WriteLine("=======================================");
             Start();
         }
 
@@ -92,6 +112,19 @@ namespace randomnumbergame
             Response response;
             response = game.Guess(guess);
             return response;
+        }
+
+        static bool ValidContinueInput(string input)
+        {
+            switch(input.ToUpper())
+            {
+                case "Y":
+                    return true;
+                case "N":
+                    return true;
+                default:
+                    return false;
+            }
         }
     }
 }
