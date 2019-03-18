@@ -14,6 +14,8 @@ namespace randomnumbergame
 
             Random rnd = new Random();
             _RandomNumber = rnd.Next(Difficulty.LowerLimit, Difficulty.UpperLimit);
+
+            TriesLeft = Difficulty.NumberOfTries;
         }
 
         public bool CheckTriesLeft()
