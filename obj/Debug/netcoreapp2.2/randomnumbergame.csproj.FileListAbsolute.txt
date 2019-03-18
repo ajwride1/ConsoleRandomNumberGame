@@ -1,0 +1,11 @@
+/home/adam/dev/netcore/console/randomnumbergame/bin/Debug/netcoreapp2.2/randomnumbergame.deps.json
+/home/adam/dev/netcore/console/randomnumbergame/bin/Debug/netcoreapp2.2/randomnumbergame.runtimeconfig.json
+/home/adam/dev/netcore/console/randomnumbergame/bin/Debug/netcoreapp2.2/randomnumbergame.runtimeconfig.dev.json
+/home/adam/dev/netcore/console/randomnumbergame/bin/Debug/netcoreapp2.2/randomnumbergame.dll
+/home/adam/dev/netcore/console/randomnumbergame/bin/Debug/netcoreapp2.2/randomnumbergame.pdb
+/home/adam/dev/netcore/console/randomnumbergame/obj/Debug/netcoreapp2.2/randomnumbergame.csprojAssemblyReference.cache
+/home/adam/dev/netcore/console/randomnumbergame/obj/Debug/netcoreapp2.2/randomnumbergame.csproj.CoreCompileInputs.cache
+/home/adam/dev/netcore/console/randomnumbergame/obj/Debug/netcoreapp2.2/randomnumbergame.AssemblyInfoInputs.cache
+/home/adam/dev/netcore/console/randomnumbergame/obj/Debug/netcoreapp2.2/randomnumbergame.AssemblyInfo.cs
+/home/adam/dev/netcore/console/randomnumbergame/obj/Debug/netcoreapp2.2/randomnumbergame.dll
+/home/adam/dev/netcore/console/randomnumbergame/obj/Debug/netcoreapp2.2/randomnumbergame.pdb

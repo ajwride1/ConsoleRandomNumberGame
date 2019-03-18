@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "/home/adam/dev/netcore/console/randomnumbergame/randomnumbergame.csproj",
+  "TargetFramework": "netcoreapp2.2",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
+}
