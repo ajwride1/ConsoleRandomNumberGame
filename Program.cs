@@ -17,7 +17,15 @@ namespace randomnumbergame
             foreach(Level level in Enum.GetValues(typeof(Level)))
             {
                 Difficulty difficulty = Factory.GetDifficulty(level);
-                Console.WriteLine($"{(int)level} - {difficulty.Name} - {difficulty.NumberOfTries} tries to guess a number from {difficulty.LowerLimit} to {difficulty.UpperLimit}");
+
+                if(difficulty.NumberOfTries == 1)
+                {
+                    Console.WriteLine($"{(int)level} - {difficulty.Name} - {difficulty.NumberOfTries} try to guess a number from {difficulty.LowerLimit} to {difficulty.UpperLimit}");
+                }
+                else
+                {
+                    Console.WriteLine($"{(int)level} - {difficulty.Name} - {difficulty.NumberOfTries} tries to guess a number from {difficulty.LowerLimit} to {difficulty.UpperLimit}");
+                }                
             }
 
             int difficultySelection;
@@ -34,13 +42,15 @@ namespace randomnumbergame
             }
 
             Game game = new Game((Level)difficultySelection);            
-            Console.WriteLine("Let's start, put in your first guess...");
+            Console.WriteLine("Put in your first guess...");
 
             Response response = new Response
             {
                 Result = "",
                 Success = false
             };
+
+            Console.WriteLine(game.CheckTriesLeft());
 
             while(game.CheckTriesLeft() && response.Success == false)
             {
@@ -52,6 +62,13 @@ namespace randomnumbergame
                     Start();
                 }
             }
+
+            if(!game.CheckTriesLeft())
+            {
+                Console.WriteLine("Sorry, you ran out of tries!");
+            }
+
+            Start();
         }
 
         static void WriteInvalidSelection()
